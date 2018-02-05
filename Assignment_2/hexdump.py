@@ -25,7 +25,8 @@ def dump():
         print('%08x  %s |%s|' % (count, res_byte, res_string))
         count += len(content) // 2
         line = f.read(16)
-    print('%08x' % count)
+    if (count > 0):
+        print('%08x' % count)
 
 
 filename = str(sys.argv[1])
